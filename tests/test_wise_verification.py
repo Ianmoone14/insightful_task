@@ -23,7 +23,7 @@ class TestWiseVerification:
         log_info("Starting Wise.com verification test...")
         log_info(f"Testing with amounts: {test_data['amounts']} RSD")
         
-        # Process Wise.com conversions (web + calculator using Wise rates) - this does everything
+        # Process Wise.com conversions (web + calculator using Wise rates)
         log_info("Processing Wise.com conversions...")
         web_data, calculator_data = converter.process_wise_conversions(test_data["amounts"])
         

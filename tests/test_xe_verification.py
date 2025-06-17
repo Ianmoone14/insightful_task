@@ -23,7 +23,7 @@ class TestXEVerification:
         log_info("Starting XE.com verification test...")
         log_info(f"Testing with amounts: {test_data['amounts']} RSD")
         
-        # Process XE.com conversions (web + calculator using XE rates) - this does everything
+        # Process XE.com conversions (web + calculator using XE rates)
         log_info("Processing XE.com conversions...")
         web_data, calculator_data = converter.process_xe_conversions(test_data["amounts"])
         
