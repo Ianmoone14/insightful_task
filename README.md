@@ -12,6 +12,9 @@ This tool automatically:
 
 ## Quick Start
 
+### Prerequisites
+- **Python 3.8+** is required (check with `python --version`)
+
 ### Step 1: Get Everything Ready
 Run the setup script - it will install everything you need automatically:
 
@@ -188,8 +191,7 @@ Each test implements:
 
 **Validation Layers:**
 1. **Data Extraction Validation**: Ensures valid numerical data retrieval
-2. **Calculation Accuracy**: Verifies mathematical operations
-3. **Cross-Platform Consistency**: Confirms identical behavior across OS platforms
-4. **Tolerance Management**: Handles acceptable precision differences
+2. **Cross-Platform Consistency**: Confirms identical behavior across OS platforms
+3. **Tolerance Management**: Handles acceptable precision differences
 
 This technical implementation ensures robust, maintainable, and reliable currency conversion testing across multiple platforms and data sources.
