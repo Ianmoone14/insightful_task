@@ -54,7 +54,7 @@ That's it! The tests will run automatically with the browser window visible so y
 - Browser runs in visible mode so you can observe the process
 
 ### Detailed Reports
-- **HTML Report**: `reports/pytest_report.html` - Beautiful, detailed test results
+- **HTML Report**: `reports/pytest_report.html` - Detailed test results
 - **Log Files**: `logs/` folder - Complete execution history with timestamps
 - **Console Output**: Real-time feedback during test runs
 
