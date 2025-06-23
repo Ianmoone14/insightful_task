@@ -25,23 +25,21 @@ def get_calculator_class() -> Optional[type[BaseCalculator]]:
     """
     system = detect_os()
 
-    match system:
-        case "windows":
-            log_info("Initializing Windows Calculator service...")
-            from calculators.windows_calculator import WindowsCalculator
-            return WindowsCalculator
-        case "darwin":  # macOS
-            log_info("Initializing macOS Calculator service...")
-            # TODO: Implement macOS calculator when needed
-            raise NotImplementedError("macOS calculator not yet implemented")
-        case "linux":
-            log_info("Initializing Linux Calculator service...")
-            from calculators.linux_calculator import LinuxCalculator
-            return LinuxCalculator
-        case _:  # Default case for unknown systems
-            log_error(f"Unsupported operating system: {system}")
-            raise NotImplementedError(f"Calculator not implemented for {system}")
-
+    if system == "windows":
+        log_info("Initializing Windows Calculator service...")
+        from calculators.windows_calculator import WindowsCalculator
+        return WindowsCalculator
+    elif system == "darwin":  # macOS
+        log_info("Initializing macOS Calculator service...")
+        # TODO: Implement macOS calculator when needed
+        raise NotImplementedError("macOS calculator not yet implemented")
+    elif system == "linux":
+        log_info("Initializing Linux Calculator service...")
+        from calculators.linux_calculator import LinuxCalculator
+        return LinuxCalculator
+    else:  # Default case for unknown systems
+        log_error(f"Unsupported operating system: {system}")
+        raise NotImplementedError(f"Calculator not implemented for {system}")
 
 def get_required_packages() -> Dict[str, list[str]]:
     """
